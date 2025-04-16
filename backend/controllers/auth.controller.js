@@ -9,6 +9,11 @@ export const signup = async (req, res) =>{
             return res.status(400).json({ message: "User already exists" });
         }
         const user = await User.create({ name, email, password });
+
+        // authenticate user
+
+
+
         res.status(201).json({ message: "User created successfully"})
         
 
